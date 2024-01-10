@@ -5,22 +5,22 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@googlemaps/markerclusterer@npm:^2.0.11":
-  version: 2.0.11
-  resolution: "@googlemaps/markerclusterer@npm:2.0.11"
+"@googlemaps/markerclusterer@npm:^2.0.15":
+  version: 2.0.15
+  resolution: "@googlemaps/markerclusterer@npm:2.0.15"
   dependencies:
     fast-deep-equal: ^3.1.3
     supercluster: ^7.1.3
-  checksum: 8ffa267ad0762a974c73d527f318be55fb7f916a8136fad9b1ef1a65d6920500220eeeafd458a4245abf03f8435ef67f7d6daadf07da0e7f7a8327eaf244c7c7
+  checksum: bb3201212fe4e0d18a22979ad1aaf9796f958ddb5e2a8bc3aa4d2666ce8e81d70d05ebca7c1d8c85027775678d825408795ff34d925316f244e027dee9b0a883
   languageName: node
   linkType: hard
 
-"@types/lodash-es@npm:^4.17.6":
-  version: 4.17.6
-  resolution: "@types/lodash-es@npm:4.17.6"
+"@types/lodash-es@npm:^4.17.7":
+  version: 4.17.7
+  resolution: "@types/lodash-es@npm:4.17.7"
   dependencies:
     "@types/lodash": "*"
-  checksum: 9bd239dd525086e278821949ce12fbdd4f100a060fed9323fc7ad5661113e1641f28a7ebab617230ed3474680d8f4de705c1928b48252bb684be6ec9eed715db
+  checksum: 4b1f39fd1d921311c37a846c0e0df9d1fa23e27448a6ad1efd7574e703abd2b2fa5e8f3b5037146000f167ba231d0d01e52747d902654151b4ceeff9f2a9b380
   languageName: node
   linkType: hard
 
@@ -56,10 +56,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "process-js-packages@workspace:."
   dependencies:
-    "@googlemaps/markerclusterer": ^2.0.11
-    "@types/lodash-es": ^4.17.6
+    "@googlemaps/markerclusterer": ^2.0.15
+    "@types/lodash-es": ^4.17.7
     lodash-es: ^4.17.21
-    tslib: ^2.4.0
+    tslib: ^2.4.1
   languageName: unknown
   linkType: soft
 
@@ -72,9 +72,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "tslib@npm:2.4.0"
-  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+"tslib@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "tslib@npm:2.4.1"
+  checksum: 19480d6e0313292bd6505d4efe096a6b31c70e21cf08b5febf4da62e95c265c8f571f7b36fcc3d1a17e068032f59c269fab3459d6cd3ed6949eafecf64315fca
   languageName: node
   linkType: hard

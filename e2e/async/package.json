@@ -1,7 +1,7 @@
 {
   "name": "async",
   "devDependencies": {
-    "@angular/cdk": "^14.2.4",
-    "@angular/material": "^14.2.4"
+    "@angular/cdk": "^16.0.3",
+    "@angular/material": "^16.0.3"
   }
 }

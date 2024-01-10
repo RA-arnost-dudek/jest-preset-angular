@@ -1,3 +1,156 @@
+## [13.1.5](https://github.com/thymikee/jest-preset-angular/compare/v13.1.3...v13.1.5) (2024-01-03)
+
+
+### Bug Fixes
+
+* Fix TS5 + ESM hang ([#2197](https://github.com/thymikee/jest-preset-angular/issues/2197)) ([90797e5](https://github.com/thymikee/jest-preset-angular/commit/90797e511f7ba511a653a88002ae28fed4bbbca1)), closes  [#2138](https://github.com/thymikee/jest-preset-angular/issues/2138) [#2196](https://github.com/thymikee/jest-preset-angular/issues/2196)
+
+
+
+## [13.1.4](https://github.com/thymikee/jest-preset-angular/compare/v13.1.3...v13.1.4) (2023-11-11)
+
+
+### Bug Fixes
+
+* **transformers:** handle single string styles or styleUrl property ([#2186](https://github.com/thymikee/jest-preset-angular/issues/2186)) ([0c99aae](https://github.com/thymikee/jest-preset-angular/commit/0c99aae402c8c7edbef8b1c64d2a7e41a76a6b60))
+
+
+
+## [13.1.3](https://github.com/thymikee/jest-preset-angular/compare/v13.1.2...v13.1.3) (2023-11-06)
+
+
+### Features
+
+* **deps:** extend version support range to Angular 17 ([#2179](https://github.com/thymikee/jest-preset-angular/issues/2179)) ([5434e22](https://github.com/thymikee/jest-preset-angular/commit/5434e2216013cbd9c750e644b9fd78216c9cdee3))
+
+
+
+## [13.1.2](https://github.com/thymikee/jest-preset-angular/compare/v13.1.1...v13.1.2) (2023-09-19)
+
+
+### Code Refactoring
+
+* refactor import `zone.js/testing` instead of `zone-testing-bundle` ([#2163](https://github.com/thymikee/jest-preset-angular/issues/2163)) ([5128ecb](https://github.com/thymikee/jest-preset-angular/commit/e47ae67f86749d872953d2fc1221e2d9c5128ecb)), closes [#2162](https://github.com/thymikee/jest-preset-angular/issues/2162)
+
+
+
+## [13.1.1](https://github.com/thymikee/jest-preset-angular/compare/v13.1.0...v13.1.1) (2023-05-14)
+
+
+### Bug Fixes
+
+* file separator issue on Windows causing error in `ngcc-jest-processor` ([#2079](https://github.com/thymikee/jest-preset-angular/issues/2079)) ([b6b3911](https://github.com/thymikee/jest-preset-angular/commit/b6b391155204120f31dc5538fee554c93b10d001))
+
+
+
+# [13.1.0](https://github.com/thymikee/jest-preset-angular/compare/v13.0.1...v13.1.0) (2023-05-06)
+
+
+### Features
+
+* bump peer deps to support angular 16 ([#2061](https://github.com/thymikee/jest-preset-angular/issues/2061)) ([18abd21](https://github.com/thymikee/jest-preset-angular/commit/18abd21fc63f4c3669878ed74f5a380852c4c193))
+* **utils:** skip ngcc processing in ng16 or higher ([#2063](https://github.com/thymikee/jest-preset-angular/issues/2063)) ([2661988](https://github.com/thymikee/jest-preset-angular/commit/266198863242804e0cd79c83f151247194b37b06))
+
+
+
+## [13.0.1](https://github.com/thymikee/jest-preset-angular/compare/v13.0.0...v13.0.1) (2023-03-21)
+
+
+### Bug Fixes
+
+* **serializer:** replace `ɵivyEnabled` with workaround to detect Ivy mode  ([#2016](https://github.com/thymikee/jest-preset-angular/issues/2016)) ([44d3922](https://github.com/thymikee/jest-preset-angular/commit/44d3922632b4f513d43d5b92a176554ecafb1de1)), closes [#2003](https://github.com/thymikee/jest-preset-angular/issues/2003)
+
+
+
+# [13.0.0](https://github.com/thymikee/jest-preset-angular/compare/v13.0.0-next.1...v13.0.0) (2023-02-18)
+
+
+### Bug Fixes
+
+* add `jest-util` to list of `dependencies` ([#1777](https://github.com/thymikee/jest-preset-angular/issues/1777)) ([db8f7c9](https://github.com/thymikee/jest-preset-angular/commit/db8f7c90a5c2395ac7b6b24be9baf56331a57198)), closes [#1773](https://github.com/thymikee/jest-preset-angular/issues/1773)
+* typo in `esbuild-check.js` ([#1806](https://github.com/thymikee/jest-preset-angular/issues/1806)) ([c2f2b61](https://github.com/thymikee/jest-preset-angular/commit/c2f2b611e8893b04904907e8255cd6a4b28dddf9))
+
+
+### Features
+
+* support Jest 29 ([#1937](https://github.com/thymikee/jest-preset-angular/issues/1937)) ([b0b57a7](https://github.com/thymikee/jest-preset-angular/commit/b0b57a7df09fe3d84baccdc4f032ffbb9235bb69)), closes [#1774](https://github.com/thymikee/jest-preset-angular/issues/1774)
+* **config:** remove hardcoded logic setting `target` to `ES2015` ([#1788](https://github.com/thymikee/jest-preset-angular/issues/1788)) ([695c730](https://github.com/thymikee/jest-preset-angular/commit/695c73022c4011cca477b8d6d62c174a8c01a9ec))
+* remove `destroyAfterEach` and `teardown` options ([#1768](https://github.com/thymikee/jest-preset-angular/issues/1768)) ([fe4c73b](https://github.com/thymikee/jest-preset-angular/commit/fe4c73b68536188fa6c89a35e60504bd7e7515df))
+
+
+## BREAKING CHANGES
+
+* Drop support for Angular 11, 12
+* Jest 29 is required
+* `destroyAfterEach` and `teardown` are no longer available to use, please use `testEnvironmentOptions` instead.
+* `target` is `tsconfig` is now respected according to user configuration, it is no longer hardcoded at `ES2015`. See also note at https://thymikee.github.io/jest-preset-angular/docs/getting-started/installation
+
+
+
+# [13.0.0-next.1](https://github.com/thymikee/jest-preset-angular/compare/v13.0.0-next.0...v13.0.0-next.1) (2023-01-27)
+
+
+### Features
+
+* support Jest 29 ([#1937](https://github.com/thymikee/jest-preset-angular/issues/1937)) ([b0b57a7](https://github.com/thymikee/jest-preset-angular/commit/b0b57a7df09fe3d84baccdc4f032ffbb9235bb69)), closes [#1774](https://github.com/thymikee/jest-preset-angular/issues/1774)
+
+
+
+# [13.0.0-next.0](https://github.com/thymikee/jest-preset-angular/compare/v12.2.2...v13.0.0-next.0) (2023-01-26)
+
+
+### Bug Fixes
+
+* add `jest-util` to list of `dependencies` ([#1777](https://github.com/thymikee/jest-preset-angular/issues/1777)) ([db8f7c9](https://github.com/thymikee/jest-preset-angular/commit/db8f7c90a5c2395ac7b6b24be9baf56331a57198)), closes [#1773](https://github.com/thymikee/jest-preset-angular/issues/1773)
+* typo in `esbuild-check.js` ([#1806](https://github.com/thymikee/jest-preset-angular/issues/1806)) ([c2f2b61](https://github.com/thymikee/jest-preset-angular/commit/c2f2b611e8893b04904907e8255cd6a4b28dddf9))
+
+
+### Features
+
+* **config:** remove hardcoded logic setting `target` to `ES2015` ([#1788](https://github.com/thymikee/jest-preset-angular/issues/1788)) ([695c730](https://github.com/thymikee/jest-preset-angular/commit/695c73022c4011cca477b8d6d62c174a8c01a9ec))
+* drop support for Angular 11 ([#1767](https://github.com/thymikee/jest-preset-angular/issues/1767)) ([22f2cd6](https://github.com/thymikee/jest-preset-angular/commit/22f2cd638fcafeee47f7f21169f8b52a28428caf))
+* drop support for Angular 12 ([#1843](https://github.com/thymikee/jest-preset-angular/issues/1843)) ([dc58df1](https://github.com/thymikee/jest-preset-angular/commit/dc58df132e58d51b01f0bcb96dd11aa362f5e2a6))
+* remove `destroyAfterEach` and `teardown` options ([#1768](https://github.com/thymikee/jest-preset-angular/issues/1768)) ([fe4c73b](https://github.com/thymikee/jest-preset-angular/commit/fe4c73b68536188fa6c89a35e60504bd7e7515df))
+
+
+
+## [12.2.6](https://github.com/thymikee/jest-preset-angular/compare/v12.2.5...v12.2.6) (2023-01-26)
+
+
+### Bug Fixes
+
+* **serializers:** remove `__ngContext__` from snapshots ([#1816](https://github.com/thymikee/jest-preset-angular/issues/1816)) ([6997b0b](https://github.com/thymikee/jest-preset-angular/commit/6997b0bc2020e8b7d88d55a107f03c60f8ab8ee1))
+
+
+
+## [12.2.5](https://github.com/thymikee/jest-preset-angular/compare/v12.2.4...v12.2.5) (2023-01-18)
+
+
+### Bug Fixes
+
+* Fix support for Angular 12 caused by the fix with downlevel-ctor transformer from https://github.com/angular/angular/pull/48638
+
+
+
+## [12.2.4](https://github.com/thymikee/jest-preset-angular/compare/v12.2.3...v12.2.4) (2023-01-16)
+
+
+### Bug Fixes
+
+* support TypeScript 4.2 for Angular 12 ([8b59e79](https://github.com/thymikee/jest-preset-angular/commit/8b59e798b565679a26945d95e0539685cfc62a3c))
+* Including Angular fix for downlevel-ctor transformer, see https://github.com/angular/angular/pull/48638
+
+
+
+## [12.2.3](https://github.com/thymikee/jest-preset-angular/compare/v12.2.2...v12.2.3) (2022-11-26)
+
+
+### Features
+
+* support Angular 15 ([b2cc6df](https://github.com/thymikee/jest-preset-angular/commit/b2cc6df5cbdc7664baf365ce4f526ce0044687ef))
+
+
+
 ## [12.2.2](https://github.com/thymikee/jest-preset-angular/compare/v12.2.1...v12.2.2) (2022-08-29)
 
 

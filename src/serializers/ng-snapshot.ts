@@ -1,4 +1,4 @@
-import type { ComponentRef, DebugNode, Type, ɵCssSelectorList } from '@angular/core';
+import type { ComponentRef, DebugNode, Type, ɵCssSelectorList, ɵNgModuleType } from '@angular/core';
 import type { ComponentFixture } from '@angular/core/testing';
 import type { Colors } from 'pretty-format';
 
@@ -38,13 +38,16 @@ interface PluginOptions {
 type Indent = (indentSpaces: string) => string;
 type Printer = (elementToSerialize: unknown) => string;
 
+const attributesToRemovePatterns = ['__ngContext__'];
 const ivyEnabled = (): boolean => {
-  // Should be required lazily, since it will throw an exception
-  // `Cannot resolve parameters...`.
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-var-requires
-  const { ɵivyEnabled } = require('@angular/core');
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { NgModule }: typeof import('@angular/core') = require('@angular/core');
 
-  return ɵivyEnabled;
+  class IvyModule {}
+  NgModule()(IvyModule);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return !!(IvyModule as ɵNgModuleType<unknown>).ɵmod;
 };
 
 const print = (fixture: unknown, print: Printer, indent: Indent, opts: PluginOptions, colors: Colors): string => {
@@ -66,7 +69,7 @@ const print = (fixture: unknown, print: Printer, indent: Indent, opts: PluginOpt
       .map((node: VEDebugNode) => Array.from(node.renderElement.childNodes).map(print).join(''))
       .join(opts.edgeSpacing);
   }
-  const attributes = Object.keys(componentInstance);
+  const attributes = Object.keys(componentInstance).filter((key) => !attributesToRemovePatterns.includes(key));
   if (attributes.length) {
     componentAttrs += attributes
       .sort()
